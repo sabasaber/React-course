@@ -1,14 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
 
 
-const App = () => {
-    return React.createElement("h1",
-    {id:"FirstH1"},
-    "Hello World!"
-    );
-};
  
 
 
