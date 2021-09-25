@@ -1,11 +1,10 @@
 import React from 'react';
-import HookCounter from './components/HookCounter/HookCounter';
-
+import HookObject from './components/HookObject/HookObject';
 const App = () => {
     
     return (<div>
                 <h1 style={{ color: 'orange' }}>Shopping App</h1>
-                 <HookCounter/>
+                 <HookObject/>
             </div> 
             );
 }
