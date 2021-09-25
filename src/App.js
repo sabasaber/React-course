@@ -10,6 +10,15 @@ class App extends React.Component{
         ],
     }
 
+    clickHandler=()=>{
+        this.setState({
+            Products:[
+                {num:"1", title:"React" , price:"100$"},
+                {num:"2", title:"Java Script" , price:"10$"},
+            ],
+        });
+    }
+
     render(){
         return (
             <div>
@@ -17,6 +26,7 @@ class App extends React.Component{
               {this.state.Products.map((product)=>{
                   return <Product num={product.num} name={product.title} price={product.price} />;
                 })}
+                <button onClick={this.clickHandler}>Click here</button>
             </div>
             
         );
