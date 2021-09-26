@@ -1,10 +1,10 @@
 import React from 'react';
-import HookObject from './components/HookObject/HookObject';
+import HookArray from './components/HookArray/HookArray';
 const App = () => {
     
     return (<div>
-                <h1 style={{ color: 'orange' }}>Shopping App</h1>
-                 <HookObject/>
+                <h1 style={{ color: 'orange' }}>HookArray</h1>
+                 <HookArray/>
             </div> 
             );
 }
