@@ -15,7 +15,7 @@ class App extends React.Component{
    
     countHandler=(id)=>{
         
-       console.log('id is equal to',id); 
+       console.log(id); 
     }
 
     render(){
@@ -23,7 +23,7 @@ class App extends React.Component{
             <div className="container">
               <h1 style={{ color: 'orange' }}>Shopping App</h1>
               {this.state.Products.map((product)=>{
-                  return <Product num={product.num} name={product.title} price={product.price} key={product.key}/>;
+                  return <Product num={product.num} name={product.title} price={product.price} key={product.key} click={()=>this.countHandler('product was clicked')}/>;
                 })}
                 <button onClick={()=>this.countHandler(2)} className="product">Click here</button>
             </div>
