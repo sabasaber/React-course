@@ -12,18 +12,10 @@ class App extends React.Component{
         count:0,
     }
 
-    constructor(props){
-        super(props);
-        this.countHandler=this.countHandler.bind(this);
-        console.log("constructor",this);
-
-    }
-
-
-    countHandler(){
+   
+    countHandler=(id)=>{
         
-       console.log('count clicked',this.state.count); 
-       this.setState({count: this.state.count+1});
+       console.log('id is equal to',id); 
     }
 
     render(){
@@ -33,7 +25,7 @@ class App extends React.Component{
               {this.state.Products.map((product)=>{
                   return <Product num={product.num} name={product.title} price={product.price} key={product.key}/>;
                 })}
-                <button onClick={this.countHandler} className="product">Click here</button>
+                <button onClick={()=>this.countHandler(2)} className="product">Click here</button>
             </div>
 
         );
