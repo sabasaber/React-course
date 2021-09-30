@@ -1,9 +1,24 @@
+.button{
+    border-radius: 5px;
+    height: 25px;
+    margin-top: 10px;
+    background-color: #A6B1E1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #424874;
+    border:0;
+}
+
+.button:hover{
+    background :#F4EEFF;
+}
 
 
 .product{
-    border:1px solid black;
-    border-radius: 100%;
-    background-color: deepskyblue;
-    padding: 30px;
-    margin: 10px;
+    border:1px solid #A6B1E1;
+    border-radius: 10px;
+    background-color: #DCD6F7;
+   display: flex;
+   justify-content: space-around;
+   width: 40rem;
+   margin-top: 15px;
 }
