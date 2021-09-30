@@ -6,8 +6,10 @@ const Product = (props) => {
               <div className={styles.product} onClick={props.click}>
                 <p>Product {props.num}: {props.name}</p>
                 <p>Price: {props.price}</p>
-                <h6 style={{color:"red"}}>{props.children}</h6>
+                <button className={styles.button} onClick={props.delete}>Delete</button>
+
               </div>
+
             
      );
 };
