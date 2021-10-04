@@ -1,0 +1,26 @@
+.navBar {
+    width: 100%;
+    background-color: #a6b1e1;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar h2{
+font-size: 16px;
+}
+
+.navBar span{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color:#dcd6f7 ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 14px;
+}
