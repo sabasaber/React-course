@@ -33,20 +33,24 @@ class ProductList extends React.Component {
         }
     };
 
-    
+    renderProduct =()=>{
+       return this.state.Products.map((product)=>{
+            return <Product 
+            product={product} 
+            key={product.key} 
+            delete={()=>this.deleteHandler(product.key)} 
+            increment={()=>this.incrementHandler(product.key)}
+            decrement={()=>this.decrementHandler(product.key)}
+            />;
+     })
+    }
 
-    render() { 
+    render() {
+        
         return <div>
-            {this.state.Products.map((product)=>{
-                   return <Product 
-                   product={product} 
-                   key={product.key} 
-                   delete={()=>this.deleteHandler(product.key)} 
-                   increment={()=>this.incrementHandler(product.key)}
-                   decrement={()=>this.decrementHandler(product.key)}
-                   />;
-            })}
-        </div>
+            {this.state.Products.length===0 ? <div>There is no product in the list</div> : <div>welcome</div>} 
+            {this.renderProduct()}
+            </div>
     }
 }
  
