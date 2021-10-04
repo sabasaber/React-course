@@ -14,8 +14,8 @@ const Product = (props) => {
                 <button className={`${styles.button} ${styles.inc}`} onClick={props.increment}>
                   +
                   </button>
-                <button className={styles.button} onClick={props.decrement} >
-                <IconContext.Provider value={{ size: "1.5em" }}>
+                <button className={ `${styles.button} ${props.product.quantity===1 && styles.remove}`} onClick={props.decrement} >
+                <IconContext.Provider value={{ size: "17px" }}>
                   {props.product.quantity>1 ? "-" : <BiTrash/>}
                   </IconContext.Provider>
                   </button>
