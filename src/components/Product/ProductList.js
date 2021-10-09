@@ -1,28 +1,30 @@
 import Product from "./Product";
-import App from "../../App";
 import React from 'react';
 
 
 class ProductList extends React.Component {
 
-    
+   
 
     renderProduct =()=>{
-       return this.props.products.map((product)=>{
+
+        const {products,onDelete,onIncrement,onDecrement}= this.props;
+       return products.map((product)=>{
             return <Product 
-            product={product} 
-            key={product.key} 
-            delete={()=>this.props.onDelete(product.key)} 
-            increment={()=>this.props.onIncrement(product.key)}
-            decrement={()=>this.props.onDecrement(product.key)}
-            />;
-     })
+                      product={product} 
+                      key={product.key} 
+                      remove={()=>onDelete(product.key)} 
+                      increment={()=>onIncrement(product.key)}
+                      decrement={()=>onDecrement(product.key)}
+                  />;
+     }
+     )
     }
 
     render() {
-        
+        const {products}=this.props;
         return <div>
-            {this.props.products.length===0 && <div>There is no product in the list</div> } 
+            {products.length===0 && <div>There is no product in the list</div> } 
             {this.renderProduct()}
             </div>
     }

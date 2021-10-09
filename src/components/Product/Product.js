@@ -1,33 +1,32 @@
 import styles from './product.module.css';
 import { BiTrash } from "react-icons/bi";
-import { IconContext } from "react-icons";
 
-const Product = (props) => {
+const Product = ({product,increment,decrement,remove}) => {
     return ( 
 
       
             
-              <div className={styles.product} onClick={props.click}>
+              <div className={styles.product} >
                 
-                <p>Product {props.product.num}: {props.product.title}</p>
+                <p>Product {product.key}: {product.title}</p>
 
-                <p>Price: {props.product.price}</p>
+                <p>Price: {product.price}</p>
 
                 <span className={styles.value}>
-                  {props.product.quantity}
+                  {product.quantity}
                   </span>
 
-                <button className={`${styles.button} ${styles.inc}`} onClick={props.increment}>
+                <button className={`${styles.button} ${styles.inc}`} onClick={increment}>
                   +
                   </button>
 
-                <button className={ `${styles.button} ${props.product.quantity===1 && styles.remove}`} onClick={props.decrement} >
-                <IconContext.Provider value={{ size: "17px" }}>
-                  {props.product.quantity>1 ? "-" : <BiTrash/>}
-                  </IconContext.Provider>
+                <button className={ `${styles.button} ${product.quantity===1 && styles.remove}`} onClick={decrement} >
+                 
+                  {product.quantity>1 ? "-" : <BiTrash size={16}/>}
+                  
                   </button>
 
-                <button className={styles.button} onClick={props.delete}>Delete</button>
+                <button className={styles.button} onClick={remove}>Delete</button>
 
               </div>
 

@@ -1,9 +1,7 @@
 import React from 'react';
 import ProductList from './components/Product/ProductList';
-import styles from './app.css'
 import './app.css'
 import NavBar from './components/NavBar/NavBar';
-import Product from './components/Product/Product';
 class App extends React.Component{
     
     state={
@@ -16,7 +14,7 @@ class App extends React.Component{
 
     deleteHandler=(id)=>{
 
-        const filteredState = this.state.Products.filter((p)=>p.key!==id);
+         const filteredState = this.state.Products.filter((p)=>p.key!==id);
         this.setState({Products:filteredState});
     };
 
